@@ -6,8 +6,8 @@
     <title>Product Calculator</title>
     <style>
         body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f4f4f4;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f8f8;
             margin: 0;
             padding: 0;
             display: flex;
@@ -20,12 +20,18 @@
             background-color: #fff;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            padding: 20px;
+            padding: 40px;
             text-align: center;
+            max-width: 400px;
+            width: 100%;
+            margin: 20px;
+            box-sizing: border-box;
         }
 
         h2 {
             color: #333;
+            margin-bottom: 20px;
+            font-size: 24px;
         }
 
         form {
@@ -37,25 +43,28 @@
         label {
             margin-bottom: 8px;
             color: #555;
+            font-size: 14px;
         }
 
         input {
             width: 100%;
-            padding: 8px;
-            margin-bottom: 16px;
+            padding: 12px;
+            margin-bottom: 20px;
             box-sizing: border-box;
             border: 1px solid #ddd;
             border-radius: 4px;
+            font-size: 16px;
         }
 
         button {
             background-color: #4caf50;
             color: white;
-            padding: 10px 20px;
+            padding: 12px;
             border: none;
             border-radius: 4px;
             cursor: pointer;
             font-size: 16px;
+            transition: background-color 0.3s;
         }
 
         button:hover {
@@ -63,12 +72,14 @@
         }
 
         #result {
-            margin-top: 20px;
+            margin-top: 40px;
+            text-align: left;
         }
 
         p {
             color: #333;
             margin: 8px 0;
+            font-size: 14px;
         }
     </style>
 </head>
@@ -106,9 +117,9 @@
 
         resultDiv.innerHTML = "<h3>Output:</h3>";
 
-        for (let i = 1; i <= 5; i++) {
+        for (let i = 1; i <= 4; i++) {
             const out = calci(price, qty, purDate, i);
-            resultDiv.innerHTML += `<p>Per Day cost if product is used for ${i} year(s): ${out.toFixed(1)}</p>`;
+            resultDiv.innerHTML += `<p>Result for ${i} year(s): ${out.toFixed(1)}</p>`;
         }
     }
 </script>
